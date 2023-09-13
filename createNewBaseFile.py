@@ -29,12 +29,12 @@ def create():
     userName = input("Name = ")
 
     # Asks for the programs purpose
-    print("\nWhat is the purpose of this program?")
+    print("\nWhat is the purpose of this program?\n(Start with: This program or similar)")
     purpose = input("Purpose = ")
 
     # Asks for the certification of the program
     print("\nYes or no. Did you discuss the code with others?")
-    certi = input("\nCode discussed = ")
+    certi = input("Code discussed = ")
     certi.lower
     discussed = False
 
@@ -65,7 +65,7 @@ def create():
     else:
         newFile.write("# I certify that this lab is entirely my own work.\n")
 
-    newFile.writelines(["\n\ndef main():\n", "\t#(Write your cool code here)\n\n", "\t# This can be deleted\n", "\treturn\n", "\nmain()"])
+    newFile.writelines(["\n\ndef main():\n",f"print({purpose})" "\t#(Write your cool code here)\n\n", "\t# This can be deleted\n", "\treturn\n", "\nmain()"])
 
     newFile.close
 
