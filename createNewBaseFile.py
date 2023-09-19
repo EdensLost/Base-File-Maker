@@ -51,8 +51,15 @@ def create():
     newFile = None
 
     while (newFile == None):
-        try: newFile = open(f"{fileName}.py", "x")
+
+        # Opens a new file if it doesnt already exist
+        #try: newFile = open(f"{fileName}.py", "x")
+        #except: "This file already exists"
+
+        # Opens a possible new file but can also overwrite an already existing file
+        try: newFile = open(f"{fileName}.py", "w")
         except: "This file already exists"
+        
 
     # Writes the base to the new file
     baseTextToWrite = ["## Imports:\n\n\n", f"# Name: {userName}\n#\n", f"# {fileName}.py\n#\n", f"# Problem: {purpose}\n#\n", f"# Certification of Authenticity:\n"]
@@ -65,7 +72,7 @@ def create():
     else:
         newFile.write("# I certify that this lab is entirely my own work.\n")
 
-    newFile.writelines(["\n\ndef main():\n", "\t#(Write your cool code here)\n\n", "\t# This can be deleted\n", "\treturn\n", "\nmain()"])
+    newFile.writelines(["\n\ndef main():\n", "\t# Prints the purpose of the code\n", f"\tprint('{purpose}')\n\n", "\t#(Write your cool code here)\n\n", "\t# This can be deleted\n", "\treturn\n", "\nmain()"])
 
     newFile.close
 
