@@ -29,12 +29,12 @@ def create():
     userName = input("Name = ")
 
     # Asks for the programs purpose
-    print("\nWhat is the purpose of this program?")
+    print("\nWhat is the purpose of this program?\n(Start with: This program or similar)")
     purpose = input("Purpose = ")
 
     # Asks for the certification of the program
     print("\nYes or no. Did you discuss the code with others?")
-    certi = input("\nCode discussed = ")
+    certi = input("Code discussed = ")
     certi.lower
     discussed = False
 
