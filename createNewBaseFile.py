@@ -50,7 +50,7 @@ discussed it with: <Name(s)>"""
     # If user does want to import things user puts what to import
     if (addImports == "yes"):
         while (pickingImports == True):
-            try: importType = int(input("\nType 1 to do (import NAME)\nType 2 to do (import NAME as NEWNAME)\nType 3 to do (from NAME import *)\nType 4 to END"))
+            try: importType = int(input("\nType 1 to do (import NAME)\nType 2 to do (import NAME as NEWNAME)\nType 3 to do (from NAME import *)\nType 4 to END\nType: "))
             except: print("\nThat's not a valid import type")
 
             if (importType == 1):
